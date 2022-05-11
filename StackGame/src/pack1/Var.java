@@ -18,7 +18,7 @@ public class Var {
 	static int backgroundspeed = 9;
 	static int x = 350;
 	static int y = 450;
-	static int speedup = 3, speeddown = 2;
+	static int speedup = 3, speeddown = -3;
 	static boolean moveUp = false;
 	static Label lbl1;
 	
@@ -32,7 +32,7 @@ public class Var {
 		try {
 			//Hintergrund
 			ib1 = ImageIO.read(new File("rsc/b1.png"));
-			ib2 = ImageIO.read(new File("rsc/b2.png"));
+			ib2 = ImageIO.read(new File("rsc/b2.1.png"));
 			//ib3 = ImageIO.read(new File("rsc/b3.png"));
 			//Spieler
 			iplayer = ImageIO.read(new File("rsc/player.png"));

@@ -7,6 +7,7 @@ import java.awt.RenderingHints;
 import javax.swing.JLabel;
 
 public class Label extends JLabel{
+	
 	//Nicht zwingend notwendig
 	private static final long serialVersionUID = 1L;
 

@@ -15,11 +15,16 @@ Timer movement;
 		@Override
 		public void run() {
 			 	
-			    if(Var.moveUp==true) {
-				    if(Var.y>0) {
-				    	Var.y -= Var.speedup;
-				    }
-			    }
+			if(Var.moveUp==true){
+			    Var.y -= Var.speedup;
+			    
+			}
+			if(Var.moveUp==false) {
+				Var.y += Var.speedup;
+				if (Var.y<=-590) {
+					Var.speedup=0;
+				}
+			}			
 			}
 		}, 0, 9);
 	}
