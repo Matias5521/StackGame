@@ -9,39 +9,26 @@ public class TastaturEingabe implements KeyListener {
 	@Override
 	public void keyTyped(KeyEvent e) {
 		
-		
 	}
 
 	@Override
 	public void keyPressed(KeyEvent e) {
 		
-		if(e.getKeyCode()==KeyEvent.VK_W) {
+		if(e.getKeyCode()==KeyEvent.VK_SPACE) {
 			Var.moveUp=true;
+			System.out.println("Leertaste gedrückt.");
 		}
-		if(e.getKeyCode()==KeyEvent.VK_A) {
-			Var.moveLeft=true;
-		}
-		if(e.getKeyCode()==KeyEvent.VK_D) {
-			Var.moveRight=true;
-		}
-		
+
 	}
 
 	@Override
 	public void keyReleased(KeyEvent e) {
 		
-		if(e.getKeyCode()==KeyEvent.VK_W) {
+		if(e.getKeyCode()==KeyEvent.VK_SPACE) {
 			Var.moveUp=false;
-		}
-		if(e.getKeyCode()==KeyEvent.VK_A) {
-			Var.moveLeft=false;
-		}
-		if(e.getKeyCode()==KeyEvent.VK_D) {
-			Var.moveRight=false;
+			System.out.println("Leertaste losgelassen.");
 		}
 		
-	}
-
-	
-
+    }	
 }
+

@@ -20,8 +20,10 @@ public class Label extends JLabel{
 		
 		g.drawImage(Var.ib1, 0, Var.backgroundY1, 800, 600, null);
 		g.drawImage(Var.ib2, 0, Var.backgroundY2, 800, 600, null);
+		//g.drawImage(Var.ib3, 0, Var.backgroundY3, 800, 600, null);
 		
 		g.drawImage(Var.iplayer,Var.x,Var.y, 100, 100, null);
+		
 		repaint();
 	}
 

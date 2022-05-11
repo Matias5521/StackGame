@@ -8,6 +8,8 @@ public class Main {
 		new Var();
 		new TastaturEingabe();
 		new Label();
+		new Background();
+		new PlayerMovement();
 
 	}
 
