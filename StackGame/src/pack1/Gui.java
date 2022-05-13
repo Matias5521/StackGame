@@ -1,8 +1,11 @@
 package pack1;
 
+import java.awt.Color;
 import javax.swing.JFrame;
 
 public class Gui {
+
+	private static final String Color_BLUE = null;
 
 	public Gui() {
 		
@@ -17,7 +20,7 @@ public class Gui {
 		Var.jf1.addKeyListener(new TastaturEingabe());
 		Var.jf1.requestFocus();
 		Var.jf1.setVisible(true);
-		
+				
 		Var.lbl1 = new Label();
 		Var.lbl1.setBounds(0,0, Var.screenwidth, Var.screenheight);
 		Var.lbl1.setVisible(true);

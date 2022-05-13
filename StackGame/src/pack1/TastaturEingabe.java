@@ -15,10 +15,9 @@ public class TastaturEingabe implements KeyListener {
 	public void keyPressed(KeyEvent e) {
 		
 		if(e.getKeyCode()==KeyEvent.VK_SPACE) {
-			Var.moveUp=true;
+			Var.moveUp=true;       
 			System.out.println("Leertaste gedrückt.");
 		}
-
 	}
 
 	@Override
@@ -28,7 +27,6 @@ public class TastaturEingabe implements KeyListener {
 			Var.moveUp=false;
 			System.out.println("Leertaste losgelassen.");
 		}
-		
     }	
 }
 

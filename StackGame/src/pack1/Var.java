@@ -17,8 +17,8 @@ public class Var {
 	//static int backgroundY3 = 0;
 	static int backgroundspeed = 9;
 	static int x = 350;
-	static int y = 450;
-	static int speedup = 3, speeddown = -3;
+	static int y = 425;
+	static int speedup = 3, speeddown=4;
 	static boolean moveUp = false;
 	static Label lbl1;
 	
