@@ -1,11 +1,10 @@
 package pack1;
 
-import java.awt.Color;
 import javax.swing.JFrame;
 
 public class Gui {
 
-	private static final String Color_BLUE = null;
+	//private static final String Color_BLUE = null;
 
 	public Gui() {
 		

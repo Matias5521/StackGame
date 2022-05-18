@@ -16,11 +16,16 @@ public class Var {
 	static int backgroundY2 = -600;
 	//static int backgroundY3 = 0;
 	static int backgroundspeed = 9;
+	static int PlayerSpeed = 3;
 	static int x = 350;
 	static int y = 425;
-	static int speedup = 3, speeddown=4;
+	static int speedup = 1, speeddown=2;
 	static boolean moveUp = false;
+	//static boolean moveDown = false;
 	static Label lbl1;
+	static boolean a, b;
+	static int grenzeOben = 385;
+	static int grenzeUnten = 425;
 	
 	static BufferedImage ib1;
 	static BufferedImage ib2;
