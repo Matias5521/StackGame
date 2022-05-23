@@ -27,7 +27,7 @@ public class Var {
 	static int grenzeOben = 385;
 	static int grenzeUnten = 425;
 	
-	static BufferedImage ib1;
+	//static BufferedImage ib1;
 	static BufferedImage ib2;
 	static BufferedImage ib3;
 	static BufferedImage iplayer;
@@ -36,13 +36,12 @@ public class Var {
 		
 		try {
 			//Hintergrund
-			ib1 = ImageIO.read(new File("rsc/b1.png"));
 			ib2 = ImageIO.read(new File("rsc/b2.1.png"));
+			ib3 = ImageIO.read(new File("rsc/b3.png"));
 			//ib3 = ImageIO.read(new File("rsc/b3.png"));
 			//Spieler
 			iplayer = ImageIO.read(new File("rsc/player.png"));
 		}catch (IOException e) {
-			
 			e.printStackTrace();
 			System.out.println("Bilder konnten nicht geladen werden");
 		}

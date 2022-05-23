@@ -18,7 +18,7 @@ public class TastaturEingabe implements KeyListener {
 			Var.moveUp=true;  
 			//Muss am Ende weg
 			System.out.println("Leertaste gedrückt.");
-		}
+		} 
 	}
 
 	@Override

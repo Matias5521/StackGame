@@ -17,10 +17,11 @@ Timer movement;
 			
 			//Einzelsprünge fehlen
 			if(Var.moveUp==true && Var.y>=Var.grenzeOben){
-			    Var.y -= Var.speedup; 
+			    Var.y -= Var.speedup;  //schwerkraft
 			    // Var.moveUp==false k�nnte auch weg sein, ist nicht zwingend notwendig
 			}else if (Var.y<=Var.grenzeUnten && Var.y==Var.grenzeOben) {
 				Var.moveUp=false;
+				Var.y += Var.speeddown;
 			}else if(Var.moveUp==false && Var.y<=Var.grenzeUnten) {
 				Var.y += Var.speeddown;
 			}
