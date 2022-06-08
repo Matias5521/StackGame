@@ -40,7 +40,7 @@ public class LabelTwo extends JLabel{
 		g.drawString(Var.titleTxt,125 , 200);
 		//Subtitle
 		g.setFont(getFont().deriveFont(Font.BOLD, 20F));
-		g.drawString(Var.subtitle,225 , 250);
+		g.drawString(Var.subtitle,200 , 250);
 		
 		//Spiel starten
 		g.setFont(getFont().deriveFont(Font.BOLD, 40F));
@@ -50,6 +50,9 @@ public class LabelTwo extends JLabel{
 		g.setFont(getFont().deriveFont(Font.BOLD, 36F));
 		g.drawString(Var.close, 304 , 480);
 		
+		//Settings
+		g.drawString(Var.setting,340, 535);
+		
 		//Prüft ob welcher Button gedrückt und markiert die Auswahl
 		if(Var.buttonNumber == 0) {
 			g.setFont(getFont().deriveFont(Font.BOLD, 40F));
@@ -58,6 +61,9 @@ public class LabelTwo extends JLabel{
 		} else if(Var.buttonNumber == 1) {
 			g.drawString("<", 270,  480);
 			g.drawString(">", 525,  480);
+		} else if(Var.buttonNumber == 2) {
+			g.drawString("<", 270,  535);
+			g.drawString(">", 525,  535);
 		}
 
 		

@@ -40,7 +40,11 @@ public class Gui {
 		//Schlieﬂt Spiel
 		} else if(Var.gameActive==2) {
 			System.exit(0);
-		}
+		} else if(Var.gameActive==3) {
+			
+			//Ruft Settings auf
+			//Rest folgt...
+			
+		}	
 	}
-
 }

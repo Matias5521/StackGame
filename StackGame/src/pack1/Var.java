@@ -26,7 +26,7 @@ public class Var {
 	//Variablen für TitleScreen
 	//Erkennung des Aktiven Bildschirms
 	static int gameActive = 0;
-	static String titleTxt = "StackGame", subtitle = "Made by: Marius, Matias, Thomas...", start = "Start Game", close = "Close Game";
+	static String titleTxt = "StackGame", subtitle = "Programmed by: Marius, Matias, Thomas...", start = "Start Game", close = "Close Game", setting = "Settings";
 	static int buttonNumber = 0;
 	
 	//static BufferedImage ib1;

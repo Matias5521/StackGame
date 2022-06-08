@@ -18,12 +18,19 @@ public class TastaturEingabe implements KeyListener {
 		if(Var.gameActive==0) {
 			if(e.getKeyCode()==KeyEvent.VK_UP) {
 				System.out.println("Taste nach oben gedrückt");
-				Var.buttonNumber=0;
+				Var.buttonNumber--;
+				//Bewirkt flüssigeres Bewegen der Auswahl 
+				if(Var.buttonNumber<0) {
+					Var.buttonNumber=2;
+				}
 			} 
 			
 			if(e.getKeyCode()==KeyEvent.VK_DOWN) {
 				System.out.println("Taste nach unten gedrückt");
-				Var.buttonNumber=1;
+				Var.buttonNumber++;
+				if(Var.buttonNumber>2) {
+					Var.buttonNumber=0;
+				}
 			}
 			
 			//Überprüft ob Taste ausgewählt
@@ -34,6 +41,9 @@ public class TastaturEingabe implements KeyListener {
 				} else if(Var.buttonNumber==1) {
 					System.out.println("Spiel wird geschlossen");
 					Var.gameActive=2;
+				} else if(Var.buttonNumber==2) {
+					System.out.println("Settings werden geöffnet");
+					Var.gameActive=3;
 				}
 			}
 		}
