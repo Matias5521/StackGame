@@ -4,14 +4,13 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		new Gui();
-		new Var();
-		new TastaturEingabe();
-		new Label();
-		new Background();
-		new PlayerMovement();
-		new PlatformMovement();
-
+			new Var();
+			new Gui();
+			new Label();
+			new TastaturEingabe();
+			new Background();
+			new PlayerMovement();
+			new PlatformMovement();
+			
 	}
-
 }

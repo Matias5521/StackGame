@@ -20,10 +20,21 @@ public class Gui {
 		Var.jf1.requestFocus();
 		Var.jf1.setVisible(true);
 				
-		Var.lbl1 = new Label();
-		Var.lbl1.setBounds(0,0, Var.screenwidth, Var.screenheight);
-		Var.lbl1.setVisible(true);
-		Var.jf1.add(Var.lbl1);
+		//Ruft TitleScreen auf
+		Var.lbl2 = new LabelTwo();
+		Var.lbl2.setBounds(0,0, Var.screenwidth, Var.screenheight);
+		Var.lbl2.setVisible(true);
+		Var.jf1.add(Var.lbl2);
+		
+		//Ruft SpielScreen auf
+		if(Var.gameActive==1) {
+			Var.lbl1 = new Label();
+			Var.lbl1.setBounds(0,0, Var.screenwidth, Var.screenheight);
+			Var.lbl1.setVisible(true);
+			Var.jf1.add(Var.lbl1);
+		} else if(Var.gameActive==2) {
+			System.exit(0);
+		}
 	}
 
 }

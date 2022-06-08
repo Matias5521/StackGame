@@ -23,9 +23,19 @@ public class Var {
 	static boolean moveUp = false;
 	//static boolean moveDown = false;
 	static Label lbl1;
+	static LabelTwo lbl2;
 	static boolean a, b;
 	static int grenzeOben = 385;
 	static int grenzeUnten = 425;
+	
+	//Variablen für TitleScreen
+	//Erkennung des Aktiven Bildschirms
+	static int gameActive = 0;
+	static String titleTxt = "StackGame";
+	static String subtitle = "Made by: Marius, Matias, Thomas...";
+	static String start = "Start Game";
+	static String close = "Close Game";
+	static int buttonNumber = 0;
 	
 	//static BufferedImage ib1;
 	static BufferedImage ib2;
