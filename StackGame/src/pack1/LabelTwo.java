@@ -22,7 +22,8 @@ public class LabelTwo extends JLabel{
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		
 		//Hintergrund (Wolkenbild)
-		g.drawImage(Var.ib2, 0, Var.backgroundY1, 800, 600, null);
+		g.drawImage(Var.ib1, 0, Var.backgroundY1, 800, 600, null);
+		g.drawImage(Var.ib2, 0, Var.backgroundY2, 800, 600, null);
 		
 		//Spieler (Pinguin)
 		g.drawImage(Var.iplayer,350 ,275 , 100, 100, null);
@@ -47,7 +48,7 @@ public class LabelTwo extends JLabel{
 		
 		//Spiel schließen
 		g.setFont(getFont().deriveFont(Font.BOLD, 36F));
-		g.drawString(Var.close, 300 , 480);
+		g.drawString(Var.close, 304 , 480);
 		
 		//Prüft ob welcher Button gedrückt und markiert die Auswahl
 		if(Var.buttonNumber == 0) {

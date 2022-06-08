@@ -17,13 +17,11 @@ public class TastaturEingabe implements KeyListener {
 		//Wenn TitleScreen aktiv ist...
 		if(Var.gameActive==0) {
 			if(e.getKeyCode()==KeyEvent.VK_UP) {
-				//Muss am Ende weg
 				System.out.println("Taste nach oben gedrückt");
 				Var.buttonNumber=0;
 			} 
 			
 			if(e.getKeyCode()==KeyEvent.VK_DOWN) {
-				//Muss am Ende weg
 				System.out.println("Taste nach unten gedrückt");
 				Var.buttonNumber=1;
 			}
@@ -31,7 +29,6 @@ public class TastaturEingabe implements KeyListener {
 			//Überprüft ob Taste ausgewählt
 			if(e.getKeyCode()==KeyEvent.VK_ENTER) {
 				if(Var.buttonNumber==0) {
-					//Muss am Ende weg
 					System.out.println("Spiel wird gestartet");
 					Var.gameActive=1;
 				} else if(Var.buttonNumber==1) {
@@ -45,7 +42,6 @@ public class TastaturEingabe implements KeyListener {
 		if(Var.gameActive==1) {
 			if(e.getKeyCode()==KeyEvent.VK_SPACE) {
 				Var.moveUp=true;  
-				//Muss am Ende weg
 				System.out.println("Leertaste gedrückt.");
 			} 
 		}
@@ -57,7 +53,6 @@ public class TastaturEingabe implements KeyListener {
 		if(Var.gameActive==1) {
 			if(e.getKeyCode()==KeyEvent.VK_SPACE) {
 				Var.moveUp=false;
-				//Muss am Ende weg
 				System.out.println("Leertaste losgelassen.");
 			}
 		}
