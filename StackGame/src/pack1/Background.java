@@ -15,6 +15,15 @@ public class Background {
 		@Override
 		public void run() {
 			
+			//Stoppt Spiel
+			if(Var.buttonNumberGame==1) {
+				//beendet timer, pausieren wäre besser
+				back.cancel();
+			} else if(Var.buttonNumberGame==0) {
+				
+			}
+				
+				
 			//Bewegt Hintergrund
 			//Toleranzbereich 
 			if(Var.backgroundY1<596) {

@@ -17,34 +17,13 @@ public class Gui {
 		Var.jf1.setResizable(false);
 		Var.jf1.addKeyListener(new TastaturEingabe());
 		Var.jf1.requestFocus();
-		Var.jf1.setVisible(true);
-		
-		//Erzeugt TitleScreen
-		if(Var.gameActive==0) {
+		Var.jf1.setVisible(true);		
 			
-			//Ruft TitleScreen auf
-			Var.lbl2 = new LabelTwo();
-			Var.lbl2.setBounds(0,0, Var.screenwidth, Var.screenheight);
-			Var.lbl2.setVisible(true);
-			Var.jf1.add(Var.lbl2);
-		
-		//Erzeugt SpielScreen
-		}else if(Var.gameActive==1) {
-			
-			//Ruft SpielScreen auf
-			Var.lbl1 = new Label();
-			Var.lbl1.setBounds(0,0, Var.screenwidth, Var.screenheight);
-			Var.lbl1.setVisible(true);
-			Var.jf1.add(Var.lbl1);
-			
-		//Schlieﬂt Spiel
-		} else if(Var.gameActive==2) {
-			System.exit(0);
-		} else if(Var.gameActive==3) {
-			
-			//Ruft Settings auf
-			//Rest folgt...
-			
-		}	
+		//Ruft TitleScreen auf
+		Var.lbl = new Label();
+		Var.lbl.setBounds(0,0, Var.screenwidth, Var.screenheight);
+		Var.lbl.setVisible(true);
+		Var.jf1.add(Var.lbl);
+				
 	}
 }

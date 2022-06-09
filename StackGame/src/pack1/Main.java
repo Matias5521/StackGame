@@ -11,6 +11,6 @@ public class Main {
 			new Background();
 			new PlayerMovement();
 			new PlatformMovement();
-			
+			new Sounds();
 	}
 }

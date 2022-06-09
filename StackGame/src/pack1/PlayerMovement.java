@@ -15,6 +15,12 @@ Timer movement;
 		@Override
 		public void run() {
 			
+			//Stoppt Spiel
+			if(Var.gameActive==3 || Var.buttonNumberGame==1) {
+				//beendet timer, pausieren wäre besser
+				movement.cancel();
+			}
+			
 			//Einzelsprünge fehlen
 			if(Var.moveUp==true && Var.y>=Var.grenzeOben){
 			    Var.y -= Var.speedup;  //schwerkraft
@@ -40,7 +46,7 @@ Timer movement;
 			}
 			*/		
 		}
-		},0 ,Var.PlayerSpeed);
+		},0 ,Var.playerSpeed);
 	}
 
 }

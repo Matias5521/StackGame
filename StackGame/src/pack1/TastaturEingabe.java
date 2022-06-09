@@ -6,6 +6,8 @@ import java.awt.event.KeyListener;
 //Überwacht Bewegungszustand der notwendigen Tasten
 public class TastaturEingabe implements KeyListener {
 
+	//private Sounds music;
+	
 	@Override
 	public void keyTyped(KeyEvent e) {
 		
@@ -14,10 +16,12 @@ public class TastaturEingabe implements KeyListener {
 	@Override
 	public void keyPressed(KeyEvent e) {
 		
+		//music.load();
+		
 		//Wenn TitleScreen aktiv ist...
 		if(Var.gameActive==0) {
-			if(e.getKeyCode()==KeyEvent.VK_UP) {
-				System.out.println("Taste nach oben gedrückt");
+			if(e.getKeyCode()==KeyEvent.VK_UP || e.getKeyCode()==KeyEvent.VK_W) {
+				System.out.println("Taste nach oben oder W gedrückt");
 				Var.buttonNumber--;
 				//Bewirkt flüssigeres Bewegen der Auswahl 
 				if(Var.buttonNumber<0) {
@@ -25,7 +29,7 @@ public class TastaturEingabe implements KeyListener {
 				}
 			} 
 			
-			if(e.getKeyCode()==KeyEvent.VK_DOWN) {
+			if(e.getKeyCode()==KeyEvent.VK_DOWN || e.getKeyCode()==KeyEvent.VK_S) {
 				System.out.println("Taste nach unten gedrückt");
 				Var.buttonNumber++;
 				if(Var.buttonNumber>2) {
@@ -35,6 +39,7 @@ public class TastaturEingabe implements KeyListener {
 			
 			//Überprüft ob Taste ausgewählt
 			if(e.getKeyCode()==KeyEvent.VK_ENTER) {
+				//music.play(Sounds.sound1);
 				if(Var.buttonNumber==0) {
 					System.out.println("Spiel wird gestartet");
 					Var.gameActive=1;
@@ -46,24 +51,62 @@ public class TastaturEingabe implements KeyListener {
 					Var.gameActive=3;
 				}
 			}
-		}
-		
 		//Wenn SpielScreen aktiv ist...
-		if(Var.gameActive==1) {
-			if(e.getKeyCode()==KeyEvent.VK_SPACE) {
+		} else if(Var.gameActive==1) {
+			if(e.getKeyCode()==KeyEvent.VK_SPACE || e.getKeyCode()==KeyEvent.VK_W || e.getKeyCode()==KeyEvent.VK_UP) {
 				Var.moveUp=true;  
-				System.out.println("Leertaste gedrückt.");
+				System.out.println("Leertaste oder W oder Pfeiltaste nach oben gedrückt.");
 			} 
+			
+			if(e.getKeyCode()==KeyEvent.VK_ESCAPE) {
+				System.out.println("Escape gedrückt");
+				Var.buttonNumberGame=1;
+				//Var.backgroundspeed=0;
+				
+			}	
+			
+			//Markiert Yes
+			if(e.getKeyCode()==KeyEvent.VK_LEFT) {
+				System.out.println("Taste nach links gedrückt");
+				Var.buttonYN++;
+				//für einen "Durchlauf" bei Markierung
+				if(Var.buttonYN>1) {
+					Var.buttonYN=0;
+				}
+			}
+			
+			//Markiert No
+            if(e.getKeyCode()==KeyEvent.VK_RIGHT) {
+            	System.out.println("Taste nach rechts gedrückt");
+            	Var.buttonYN--;
+            	//für einen "Durchlauf" bei Markierung
+            	if(Var.buttonYN<0) {
+            		Var.buttonYN=1;
+            	}
+			}
+            
+            //Wählt yes oder no aus
+            if(e.getKeyCode()==KeyEvent.VK_ENTER) {
+            	if(Var.buttonYN==0) {
+            		System.out.println("YES ausgewählt");
+            		Var.gameActive=0;
+            		Var.buttonNumberGame=0;
+            	}else if(Var.buttonYN==1) {
+            		System.out.println("NO ausgewählt");
+            		Var.buttonNumberGame=0;
+            	}
+            }
 		}
 	}
 
 	@Override
 	public void keyReleased(KeyEvent e) {
 		
+		//Wenn SpielScreen aktiv ist...
 		if(Var.gameActive==1) {
-			if(e.getKeyCode()==KeyEvent.VK_SPACE) {
+			if(e.getKeyCode()==KeyEvent.VK_SPACE || e.getKeyCode()==KeyEvent.VK_W || e.getKeyCode()==KeyEvent.VK_UP) {
 				Var.moveUp=false;
-				System.out.println("Leertaste losgelassen.");
+				System.out.println("Leertaste oder W oder Pfeiltaste nach oben losgelassen.");
 			}
 		}
     }	
