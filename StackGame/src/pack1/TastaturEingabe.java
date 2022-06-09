@@ -17,6 +17,13 @@ public class TastaturEingabe implements KeyListener {
 	public void keyPressed(KeyEvent e) {
 		
 		//music.load();
+		if(e.getKeyCode()==KeyEvent.VK_M) {
+			Var.i+=1;
+		}
+		
+        if(e.getKeyCode()==KeyEvent.VK_T) {
+        	Var.j+=1;
+        }
 		
 		//Wenn TitleScreen aktiv ist...
 		if(Var.gameActive==0) {
@@ -30,7 +37,7 @@ public class TastaturEingabe implements KeyListener {
 			} 
 			
 			if(e.getKeyCode()==KeyEvent.VK_DOWN || e.getKeyCode()==KeyEvent.VK_S) {
-				System.out.println("Taste nach unten gedrückt");
+				System.out.println("Taste nach unten oder S gedrückt");
 				Var.buttonNumber++;
 				if(Var.buttonNumber>2) {
 					Var.buttonNumber=0;
@@ -61,9 +68,18 @@ public class TastaturEingabe implements KeyListener {
 			if(e.getKeyCode()==KeyEvent.VK_ESCAPE) {
 				System.out.println("Escape gedrückt");
 				Var.buttonNumberGame=1;
-				//Var.backgroundspeed=0;
 				
-			}	
+			//Wählt yes oder no aus
+			}else if(e.getKeyCode()==KeyEvent.VK_ENTER) {
+	            if(Var.buttonYN==0) {
+	            	System.out.println("YES ausgewählt");
+	            	Var.gameActive=0;
+	            	Var.buttonNumberGame=0;
+	            }else if(Var.buttonYN==1) {
+	            	System.out.println("NO ausgewählt");
+	            	Var.buttonNumberGame=0;
+	            }
+	        }
 			
 			//Markiert Yes
 			if(e.getKeyCode()==KeyEvent.VK_LEFT) {
@@ -84,18 +100,19 @@ public class TastaturEingabe implements KeyListener {
             		Var.buttonYN=1;
             	}
 			}
-            
-            //Wählt yes oder no aus
-            if(e.getKeyCode()==KeyEvent.VK_ENTER) {
-            	if(Var.buttonYN==0) {
-            		System.out.println("YES ausgewählt");
-            		Var.gameActive=0;
-            		Var.buttonNumberGame=0;
-            	}else if(Var.buttonYN==1) {
-            		System.out.println("NO ausgewählt");
-            		Var.buttonNumberGame=0;
-            	}
-            }
+		} else if(Var.gameActive==3) {
+			//Geht zum Startmenü zurück
+			if(e.getKeyCode()==KeyEvent.VK_ESCAPE) {
+				Var.gameActive=0;
+				System.out.println("Settings verlassen");
+			}
+				
+		} else if(Var.gameActive==4) {
+			//Geht zum Startmenü zurück
+			if(e.getKeyCode()==KeyEvent.VK_ESCAPE) {
+				Var.gameActive=0;
+			}
+				
 		}
 	}
 

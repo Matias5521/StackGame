@@ -21,15 +21,15 @@ public class Var {
 	static Label lbl;
 	static boolean a, b;
 	static int grenzeOben = 385, grenzeUnten = 425;
+	static int i=0;
+	static int j=0;
 	
 	//Variablen für TitleScreen
 	//Erkennung des Aktiven Bildschirms
-	static int gameActive = 0;
+	static int gameActive = 0, buttonNumber = 0,  buttonNumberGame = 0, buttonYN = 0;
 	static String titleTxt = "StackGame", subtitle = "Programmed by: Marius, Matias, Thomas...", start = "Start Game", close = "Close Game", setting = "Settings";
 	static String gameQuestion = "Do you realy", gameQuestion2 = "want to exit?", yes = "YES", no = "NO";
-	static int buttonNumber = 0;
-	static int buttonNumberGame = 0;
-	static int buttonYN = 0;
+	static String normalTxt = "GLÜCKWUNSCH!", normalTxt2 = "SIE HABEN EIN EASTEREGG", normalTxt3 = "GEFUNDEN!";
 	
 	//static BufferedImage ib1;
 	static BufferedImage ib1;

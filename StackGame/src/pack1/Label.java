@@ -5,6 +5,8 @@ import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
+import java.awt.BasicStroke;
+import java.awt.Stroke;
 
 import javax.swing.JLabel;
 
@@ -21,8 +23,14 @@ public class Label extends JLabel{
 		//Ist für Antialiasing zuständig
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		
+		Stroke stroke1 = new BasicStroke(4f); 
+		
 		//Öffnet TitleScreen
 		if(Var.gameActive==0) {
+			
+			if(Var.i==2 && Var.j==1) {
+				Var.gameActive=4;
+			}
 			
 			//Hintergrund (Wolkenbild)
 			g.drawImage(Var.ib1, 0, Var.backgroundY1, 800, 600, null);
@@ -82,11 +90,16 @@ public class Label extends JLabel{
 			if(Var.buttonNumberGame==1) {
 				
 				//Pop-up Fenster fürs Leaven
-				g.setColor(Color.BLUE);
-				g.drawRect(250, 100, 300, 300);
+				g.setColor(Color.CYAN);
+				g.fillRect(250, 100, 300, 300);
+				//g.drawRect(250, 100, 300, 300);
+				((Graphics2D) g).setStroke(stroke1);
 				g.setFont(getFont().deriveFont(Font.BOLD, 30F));
-				g.drawString(Var.gameQuestion, 300, 150);
-				g.drawString(Var.gameQuestion2, 300, 200);
+				g.setColor(Color.BLUE);
+				g.drawString(Var.gameQuestion, 310, 190);
+				g.drawLine(310, 200, 490, 200);
+				g.drawString(Var.gameQuestion2, 310, 240);
+				g.drawLine(310, 250, 490, 250);
 				//Kasten linksunten
 				g.drawLine(250, 300, 550, 300);
 				//Kasten rechtsunten
@@ -118,7 +131,28 @@ public class Label extends JLabel{
 			g.drawImage(Var.ib2, 0, Var.backgroundY2, 800, 600, null);
 			
 			//Lautstärke und Steuerung kommt noch und Escape zurück zum Start
+			
+		//Easteregg
+		} else if(Var.gameActive==4) {
+			
+			//Hintergrund (Wolkenbild)
+			g.drawImage(Var.ib1, 0, Var.backgroundY1, 800, 600, null);
+			g.drawImage(Var.ib2, 0, Var.backgroundY2, 800, 600, null); 
+			
+			//Spieler (Pinguin)
+			g.drawImage(Var.iplayer,350 ,400 , 100, 100, null);
+
+			g.setFont(getFont().deriveFont(Font.BOLD, 50F));
+			g.setColor(Color.BLUE);
+			((Graphics2D) g).setStroke(stroke1);
+			g.drawString(Var.normalTxt, 180, 190);
+			g.drawLine(183, 200, 605, 200);
+			g.drawString(Var.normalTxt2, 40, 260);
+			g.drawLine(43, 270, 740, 270);
+			g.drawString(Var.normalTxt3, 250, 330);
+			g.drawLine(253, 340, 545, 340);
 		}
+		
 		repaint();
 	}
 
