@@ -1,9 +1,9 @@
-#StackGame Notizen:
+StackGame Notizen:
 
-##Aufgaben:
+Aufgaben:
 
-###Marius:
+Marius:
 
-###Matias:
+Matias:
 
-###Thomas:
+Thomas:
